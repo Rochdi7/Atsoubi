@@ -4,11 +4,15 @@ use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-| We load frontoffice + backoffice routes
+| Frontoffice Routes
 |--------------------------------------------------------------------------
 */
 
-require __DIR__.'/frontoffice.php';
-require __DIR__.'/backoffice.php';
+Route::name('frontoffice.')->group(function () {
+
+    // temporary front page
+    Route::get('/', function () {
+        return view('frontoffice.home');
+    })->name('home');
+
+});
