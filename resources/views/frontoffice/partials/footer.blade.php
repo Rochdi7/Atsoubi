@@ -4,43 +4,43 @@
         <!--Widgets Section-->
         <div class="widgets-section wow fadeInUp">
             <div class="row">
+
+                {{-- Bloc logo + contact --}}
                 <div class="big-column col-xl-4 col-lg-3 col-md-12">
                     <div class="footer-column about-widget">
-                        <div class="logo"><a href="#"><img src="{{ asset('assets/frontoffice/images/logo.svg') }}"
-                                    alt=""></a></div>
-                        <p class="phone-num"><span>Call us </span><a href="thebeehost@support.com">123 456 7890</a></p>
-                        <p class="address">329 Queensberry Street, North Melbourne VIC<br> 3051, Australia. <br><a
-                                href="mailto:support@superio.com" class="email">support@superio.com</a></p>
+                        <div class="logo">
+                            <a href="{{ route('frontoffice.home') }}">
+                                <img src="{{ asset('assets/frontoffice/images/logo.svg') }}" alt="Atsoubi">
+                            </a>
+                        </div>
+
+                        <p class="phone-num">
+                            <span>WhatsApp</span>
+                            <a href="https://wa.me/212600000000" target="_blank">+212 6 00 00 00 00</a>
+                        </p>
+
+                        <p class="address">
+                            Maroc • Accompagnement vers l’Allemagne
+                            <br>
+                            <a href="mailto:contact@atsoubi.ma" class="email">contact@atsoubi.ma</a>
+                        </p>
                     </div>
                 </div>
 
+                {{-- Liens --}}
                 <div class="big-column col-xl-8 col-lg-9 col-md-12">
                     <div class="row">
-                        <div class="footer-column col-lg-3 col-md-6 col-sm-12">
-                            <div class="footer-widget links-widget">
-                                <h4 class="widget-title">For Candidates</h4>
-                                <div class="widget-content">
-                                    <ul class="list">
-                                        <li><a href="#">Browse Jobs</a></li>
-                                        <li><a href="#">Browse Categories</a></li>
-                                        <li><a href="#">Candidate Dashboard</a></li>
-                                        <li><a href="#">Job Alerts</a></li>
-                                        <li><a href="#">My Bookmarks</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
 
                         <div class="footer-column col-lg-3 col-md-6 col-sm-12">
                             <div class="footer-widget links-widget">
-                                <h4 class="widget-title">For Employers</h4>
+                                <h4 class="widget-title">Atsoubi</h4>
                                 <div class="widget-content">
                                     <ul class="list">
-                                        <li><a href="#">Browse Candidates</a></li>
-                                        <li><a href="#">Employer Dashboard</a></li>
-                                        <li><a href="#">Add Job</a></li>
-                                        <li><a href="#">Job Packages</a></li>
+                                        <li><a href="{{ route('frontoffice.home') }}">Accueil</a></li>
+                                        <li><a href="{{ route('frontoffice.home') }}#services">Accompagnement</a></li>
+                                        <li><a href="{{ route('frontoffice.home') }}#process">Étapes</a></li>
+                                        <li><a href="{{ route('frontoffice.home') }}#testimonials">Témoignages</a></li>
+                                        <li><a href="{{ route('frontoffice.home') }}#contact">Contact</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -48,57 +48,77 @@
 
                         <div class="footer-column col-lg-3 col-md-6 col-sm-12">
                             <div class="footer-widget links-widget">
-                                <h4 class="widget-title">About Us</h4>
+                                <h4 class="widget-title">Services</h4>
                                 <div class="widget-content">
                                     <ul class="list">
-                                        <li><a href="#">Job Page</a></li>
-                                        <li><a href="#">Job Page Alternative</a></li>
-                                        <li><a href="#">Resume Page</a></li>
-                                        <li><a href="#">Blog</a></li>
-                                        <li><a href="#">Contact</a></li>
+                                        <li><a href="{{ route('frontoffice.home') }}#services">Contrat pour
+                                                l’Allemagne</a></li>
+                                        <li><a href="{{ route('frontoffice.home') }}#services">Dossier & Visa</a></li>
+                                        <li><a href="{{ route('frontoffice.home') }}#services">Orientation & Suivi</a>
+                                        </li>
+                                        <li><a href="{{ route('frontoffice.home') }}#contact">Pré-évaluation</a></li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
-
 
                         <div class="footer-column col-lg-3 col-md-6 col-sm-12">
                             <div class="footer-widget links-widget">
-                                <h4 class="widget-title">Helpful Resources</h4>
+                                <h4 class="widget-title">Pour les entreprises</h4>
                                 <div class="widget-content">
                                     <ul class="list">
-                                        <li><a href="#">Site Map</a></li>
-                                        <li><a href="#">Terms of Use</a></li>
-                                        <li><a href="#">Privacy Center</a></li>
-                                        <li><a href="#">Security Center</a></li>
-                                        <li><a href="#">Accessibility Center</a></li>
+                                        <li><a href="{{ route('frontoffice.home') }}#contact">Devenir partenaire</a>
+                                        </li>
+                                        <li><a href="{{ route('frontoffice.home') }}#process">Notre processus</a></li>
+                                        <li><a href="{{ route('frontoffice.home') }}#testimonials">Résultats</a></li>
+                                        <li><a href="{{ route('frontoffice.home') }}#contact">Demander un échange</a>
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
+
+                        <div class="footer-column col-lg-3 col-md-6 col-sm-12">
+                            <div class="footer-widget links-widget">
+                                <h4 class="widget-title">Légal</h4>
+                                <div class="widget-content">
+                                    <ul class="list">
+                                        <li><a href="#">Conditions d’utilisation</a></li>
+                                        <li><a href="#">Politique de confidentialité</a></li>
+                                        <li><a href="#">Mentions légales</a></li>
+                                        <li><a href="{{ route('frontoffice.home') }}#contact">Support</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
+
             </div>
         </div>
     </div>
-
 
     <!--Bottom-->
     <div class="footer-bottom">
         <div class="auto-container">
             <div class="outer-box">
-                <div class="copyright-text">© 2021 <a href="#">Superio</a>. All Right Reserved.</div>
+                <div class="copyright-text">
+                    © {{ date('Y') }} <a href="{{ route('frontoffice.home') }}">Atsoubi</a>. Tous droits réservés.
+                </div>
+
                 <div class="social-links">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                 </div>
             </div>
         </div>
     </div>
 
     <!-- Scroll To Top -->
-    <div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-angle-up"></span></div>
+    <div class="scroll-to-top scroll-to-target" data-target="html">
+        <span class="fa fa-angle-up"></span>
+    </div>
 </footer>
 <!-- End Main Footer -->

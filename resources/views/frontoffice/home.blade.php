@@ -1,6 +1,6 @@
 @extends('frontoffice.layouts.app')
 
-@section('title', 'Accueil')
+@section('title', 'Atsoubi | Contrat & Études en Allemagne')
 
 @section('content')
 
@@ -11,44 +11,56 @@
                 <div class="content-column col-lg-7 col-md-12 col-sm-12">
                     <div class="inner-column wow fadeInUp" data-wow-delay="1000ms">
                         <div class="title-box">
-                            <h3>There Are <span class="colored">93,178</span> Postings Here<br> For you!</h3>
-                            <div class="text">Find Jobs, Employment & Career Opportunities</div>
+                            <h3>
+                                Réalisez votre projet
+                                <span class="colored">Allemagne</span><br>
+                                avec un contrat + accompagnement complet
+                            </h3>
+                            <div class="text">
+                                Atsoubi accompagne les étudiants pour trouver une opportunité (contrat / formation),
+                                préparer le dossier et réussir les étapes jusqu’au départ.
+                            </div>
                         </div>
 
-                        <!-- Job Search Form -->
+                        <!-- Lead Form -->
                         <div class="job-search-form">
-                            <form method="post" action="job-list-v10.html">
+                            <form method="post" action="#">
+                                @csrf
                                 <div class="row">
-                                    <div class="form-group col-lg-5 col-md-12 col-sm-12">
-                                        <span class="icon flaticon-search-1"></span>
-                                        <input type="text" name="field_name"
-                                            placeholder="Job title, keywords, or company">
+                                    <div class="form-group col-lg-4 col-md-12 col-sm-12">
+                                        <span class="icon flaticon-user"></span>
+                                        <input type="text" name="full_name" placeholder="Nom complet" required>
                                     </div>
-                                    <!-- Form Group -->
+
                                     <div class="form-group col-lg-4 col-md-12 col-sm-12 location">
-                                        <span class="icon flaticon-map-locator"></span>
-                                        <input type="text" name="field_name" placeholder="City or postcode">
+                                        <span class="icon flaticon-email-3"></span>
+                                        <input type="email" name="email" placeholder="Email" required>
                                     </div>
-                                    <!-- Form Group -->
-                                    <div class="form-group col-lg-3 col-md-12 col-sm-12 btn-box">
-                                        <button type="submit" class="theme-btn btn-style-one"><span class="btn-title">Find
-                                                Jobs</span></button>
+
+                                    <div class="form-group col-lg-4 col-md-12 col-sm-12 btn-box">
+                                        <button type="submit" class="theme-btn btn-style-one">
+                                            <span class="btn-title">Pré-évaluation gratuite</span>
+                                        </button>
+                                    </div>
+
+                                    <div class="form-group col-12 mt-2">
+                                        <small style="opacity:.85;display:block;">
+                                            Réponse sous 24h • Pré-évaluation gratuite • Accompagnement étape par étape
+                                        </small>
                                     </div>
                                 </div>
                             </form>
                         </div>
-                        <!-- Job Search Form -->
+                        <!-- End Lead Form -->
 
-                        <!-- Popular Search -->
+                        <!-- Popular Search (Quick tags) -->
                         <div class="popular-searches">
-                            <span class="title">Popular Searches : </span>
-                            <a href="#">Designer</a>,
-                            <a href="#">Developer</a>,
-                            <a href="#">Web</a>,
-                            <a href="#">IOS</a>,
-                            <a href="#">PHP</a>,
-                            <a href="#">Senior</a>,
-                            <a href="#">Engineer</a>,
+                            <span class="title">Profil recherché :</span>
+                            <a href="#">Étudiants</a>,
+                            <a href="#">Bac +</a>,
+                            <a href="#">Motivés</a>,
+                            <a href="#">Langue allemande</a>,
+                            <a href="#">Dossier sérieux</a>
                         </div>
                         <!-- End Popular Search -->
                     </div>
@@ -56,39 +68,38 @@
 
                 <div class="image-column col-lg-5 col-md-12">
                     <div class="image-box">
-                        <figure class="main-image wow fadeIn" data-wow-delay="500ms"><img
-                                src="{{ asset('assets/frontoffice/images/resource/banner-img-1.png') }}" alt="">
+                        <figure class="main-image wow fadeIn" data-wow-delay="500ms">
+                            <img src="{{ asset('assets/frontoffice/images/resource/banner-img-1.png') }}" alt="Atsoubi Allemagne">
                         </figure>
 
-                        <!-- Info BLock One -->
+                        <!-- Info Block One -->
                         <div class="info_block anm wow fadeIn" data-wow-delay="1000ms" data-speed-x="2" data-speed-y="2">
                             <span class="icon flaticon-email-3"></span>
-                            <p>Work Inquiry From <br>Ali Tufan</p>
+                            <p>Pré-évaluation<br>gratuite</p>
                         </div>
 
-                        <!-- Info BLock Two -->
-                        <div class="info_block_two anm wow fadeIn" data-wow-delay="2000ms" data-speed-x="1"
-                            data-speed-y="1">
-                            <p>10k+ Candidates</p>
-                            <div class="image"><img src="images/resource/multi-peoples.png" alt=""></div>
+                        <!-- Info Block Two -->
+                        <div class="info_block_two anm wow fadeIn" data-wow-delay="2000ms" data-speed-x="1" data-speed-y="1">
+                            <p>Accompagnement complet</p>
+                            <div class="image">
+                                <img src="{{ asset('assets/frontoffice/images/resource/multi-peoples.png') }}" alt="">
+                            </div>
                         </div>
 
-                        <!-- Info BLock Three -->
-                        <div class="info_block_three anm wow fadeIn" data-wow-delay="1500ms" data-speed-x="4"
-                            data-speed-y="4">
+                        <!-- Info Block Three -->
+                        <div class="info_block_three anm wow fadeIn" data-wow-delay="1500ms" data-speed-x="4" data-speed-y="4">
                             <span class="icon flaticon-briefcase"></span>
-                            <p>Creative Agency</p>
-                            <span class="sub-text">Startup</span>
+                            <p>Contrat / Formation</p>
+                            <span class="sub-text">Allemagne</span>
                             <span class="right_icon fa fa-check"></span>
                         </div>
 
-                        <!-- Info BLock Four -->
-                        <div class="info_block_four anm wow fadeIn" data-wow-delay="2500ms" data-speed-x="3"
-                            data-speed-y="3">
+                        <!-- Info Block Four -->
+                        <div class="info_block_four anm wow fadeIn" data-wow-delay="2500ms" data-speed-x="3" data-speed-y="3">
                             <span class="icon flaticon-file"></span>
                             <div class="inner">
-                                <p>Upload Your CV</p>
-                                <span class="sub-text">It only takes a few seconds</span>
+                                <p>Dossier & Visa</p>
+                                <span class="sub-text">Étapes guidées</span>
                             </div>
                         </div>
                     </div>
@@ -98,110 +109,72 @@
     </section>
     <!-- End Banner Section-->
 
-    <!-- Job Categories -->
+    <!-- Services / Categories (re-used section design) -->
     <section class="job-categories">
         <div class="auto-container">
             <div class="sec-title text-center">
-                <h2>Popular Job Categories</h2>
-                <div class="text">2020 jobs live - 293 added today.</div>
+                <h2>Notre accompagnement Atsoubi</h2>
+                <div class="text">Un parcours clair pour maximiser vos chances d’aller en Allemagne.</div>
             </div>
 
             <div class="row wow fadeInUp">
-                <!-- Category Block -->
+
                 <div class="category-block col-lg-4 col-md-6 col-sm-12">
                     <div class="inner-box">
                         <div class="content">
-                            <span class="icon flaticon-money-1"></span>
-                            <h4><a href="#">Accounting / Finance</a></h4>
-                            <p>(2 open positions)</p>
+                            <span class="icon flaticon-search-1"></span>
+                            <h4><a href="#">Pré-évaluation</a></h4>
+                            <p>Analyse de votre profil, niveau, objectifs, et faisabilité.</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- Category Block -->
                 <div class="category-block col-lg-4 col-md-6 col-sm-12">
                     <div class="inner-box">
                         <div class="content">
-                            <span class="icon flaticon-promotion"></span>
-                            <h4><a href="#">Marketing</a></h4>
-                            <p>86 open positions)</p>
+                            <span class="icon flaticon-file"></span>
+                            <h4><a href="#">Préparation du dossier</a></h4>
+                            <p>CV, motivation, documents, traductions et organisation.</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- Category Block -->
                 <div class="category-block col-lg-4 col-md-6 col-sm-12">
                     <div class="inner-box">
                         <div class="content">
-                            <span class="icon flaticon-vector"></span>
-                            <h4><a href="#">Design</a></h4>
-                            <p>43 open positions)</p>
+                            <span class="icon flaticon-briefcase"></span>
+                            <h4><a href="#">Recherche d’opportunité</a></h4>
+                            <p>Orientation vers contrats / formations selon votre profil.</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- Category Block -->
                 <div class="category-block col-lg-4 col-md-6 col-sm-12">
                     <div class="inner-box">
                         <div class="content">
-                            <span class="icon flaticon-web-programming"></span>
-                            <h4><a href="#">Development</a></h4>
-                            <p>(12 open positions)</p>
+                            <span class="icon flaticon-email-3"></span>
+                            <h4><a href="#">Suivi & communication</a></h4>
+                            <p>Étapes, rendez-vous, relances et informations importantes.</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- Category Block -->
                 <div class="category-block col-lg-4 col-md-6 col-sm-12">
                     <div class="inner-box">
                         <div class="content">
-                            <span class="icon flaticon-headhunting"></span>
-                            <h4><a href="#">Human Resource</a></h4>
-                            <p>55 open positions)</p>
+                            <span class="icon flaticon-map-locator"></span>
+                            <h4><a href="#">Démarches Allemagne</a></h4>
+                            <p>Conseils, exigences, et préparation administrative.</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- Category Block -->
                 <div class="category-block col-lg-4 col-md-6 col-sm-12">
                     <div class="inner-box">
                         <div class="content">
                             <span class="icon flaticon-rocket-ship"></span>
-                            <h4><a href="#">Project Management</a></h4>
-                            <p>(2 open positions)</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Category Block -->
-                <div class="category-block col-lg-4 col-md-6 col-sm-12">
-                    <div class="inner-box">
-                        <div class="content">
-                            <span class="icon flaticon-support-1"></span>
-                            <h4><a href="#">Customer Service</a></h4>
-                            <p>(2 open positions)</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Category Block -->
-                <div class="category-block col-lg-4 col-md-6 col-sm-12">
-                    <div class="inner-box">
-                        <div class="content">
-                            <span class="icon flaticon-first-aid-kit-1"></span>
-                            <h4><a href="#">Health and Care</a></h4>
-                            <p>(25 open positions)</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Category Block -->
-                <div class="category-block col-lg-4 col-md-6 col-sm-12">
-                    <div class="inner-box">
-                        <div class="content">
-                            <span class="icon flaticon-car"></span>
-                            <h4><a href="#">Automotive Jobs</a></h4>
-                            <p>92 open positions</p>
+                            <h4><a href="#">Accompagnement jusqu’au départ</a></h4>
+                            <p>Checklist, organisation finale et conseils pratiques.</p>
                         </div>
                     </div>
                 </div>
@@ -209,446 +182,326 @@
             </div>
         </div>
     </section>
-    <!-- End Job Categories -->
+    <!-- End Services -->
 
-    <!-- Job Section -->
+    <!-- Process Section (re-used job cards style) -->
     <section class="job-section">
         <div class="auto-container">
             <div class="sec-title text-center">
-                <h2>Featured Jobs</h2>
-                <div class="text">Know your worth and find the job that qualify your life</div>
+                <h2>Comment ça marche ?</h2>
+                <div class="text">Un parcours simple en 4 étapes.</div>
             </div>
 
             <div class="row wow fadeInUp">
-                <!-- Job Block -->
+
                 <div class="job-block col-lg-6 col-md-12 col-sm-12">
                     <div class="inner-box">
                         <div class="content">
-                            <span class="company-logo"><img src="images/resource/company-logo/1-1.png"
-                                    alt=""></span>
-                            <h4><a href="#">Software Engineer (Android), Libraries</a></h4>
+                            <span class="company-logo">
+                                <img src="{{ asset('assets/frontoffice/images/resource/company-logo/1-1.png') }}" alt="">
+                            </span>
+                            <h4><a href="#">1) Pré-évaluation</a></h4>
                             <ul class="job-info">
-                                <li><span class="icon flaticon-briefcase"></span> Segment</li>
-                                <li><span class="icon flaticon-map-locator"></span> London, UK</li>
-                                <li><span class="icon flaticon-clock-3"></span> 11 hours ago</li>
-                                <li><span class="icon flaticon-money"></span> $35k - $45k</li>
+                                <li><span class="icon flaticon-user"></span> Profil & objectifs</li>
+                                <li><span class="icon flaticon-clock-3"></span> Rapide</li>
+                                <li><span class="icon flaticon-email-3"></span> Retour sous 24h</li>
+                                <li><span class="icon flaticon-map-locator"></span> À distance</li>
                             </ul>
                             <ul class="job-other-info">
-                                <li class="time">Full Time</li>
-                                <li class="privacy">Private</li>
-                                <li class="required">Urgent</li>
+                                <li class="time">Gratuite</li>
+                                <li class="privacy">Confidentiel</li>
+                                <li class="required">Important</li>
                             </ul>
-                            <button class="bookmark-btn"><span class="flaticon-bookmark"></span></button>
+                            <button class="bookmark-btn" type="button"><span class="flaticon-bookmark"></span></button>
                         </div>
                     </div>
                 </div>
 
-                <!-- Job Block -->
                 <div class="job-block col-lg-6 col-md-12 col-sm-12">
                     <div class="inner-box">
                         <div class="content">
-                            <span class="company-logo"><img src="images/resource/company-logo/1-2.png"
-                                    alt=""></span>
-                            <h4><a href="#">Recruiting Coordinator</a></h4>
+                            <span class="company-logo">
+                                <img src="{{ asset('assets/frontoffice/images/resource/company-logo/1-2.png') }}" alt="">
+                            </span>
+                            <h4><a href="#">2) Dossier complet</a></h4>
                             <ul class="job-info">
-                                <li><span class="icon flaticon-briefcase"></span> Segment</li>
-                                <li><span class="icon flaticon-map-locator"></span> London, UK</li>
-                                <li><span class="icon flaticon-clock-3"></span> 11 hours ago</li>
-                                <li><span class="icon flaticon-money"></span> $35k - $45k</li>
+                                <li><span class="icon flaticon-file"></span> Documents & organisation</li>
+                                <li><span class="icon flaticon-briefcase"></span> CV & motivation</li>
+                                <li><span class="icon flaticon-clock-3"></span> Étapes guidées</li>
+                                <li><span class="icon flaticon-email-3"></span> Suivi</li>
                             </ul>
                             <ul class="job-other-info">
-                                <li class="time">Full Time</li>
-                                <li class="privacy">Private</li>
-                                <li class="required">Urgent</li>
+                                <li class="time">Clair</li>
+                                <li class="privacy">Sérieux</li>
+                                <li class="required">Complet</li>
                             </ul>
-                            <button class="bookmark-btn"><span class="flaticon-bookmark"></span></button>
+                            <button class="bookmark-btn" type="button"><span class="flaticon-bookmark"></span></button>
                         </div>
                     </div>
                 </div>
 
-                <!-- Job Block -->
                 <div class="job-block col-lg-6 col-md-12 col-sm-12">
                     <div class="inner-box">
                         <div class="content">
-                            <span class="company-logo"><img src="images/resource/company-logo/1-3.png"
-                                    alt=""></span>
-                            <h4><a href="#">Product Manager, Studio</a></h4>
+                            <span class="company-logo">
+                                <img src="{{ asset('assets/frontoffice/images/resource/company-logo/1-3.png') }}" alt="">
+                            </span>
+                            <h4><a href="#">3) Opportunité (contrat / formation)</a></h4>
                             <ul class="job-info">
-                                <li><span class="icon flaticon-briefcase"></span> Segment</li>
-                                <li><span class="icon flaticon-map-locator"></span> London, UK</li>
-                                <li><span class="icon flaticon-clock-3"></span> 11 hours ago</li>
-                                <li><span class="icon flaticon-money"></span> $35k - $45k</li>
+                                <li><span class="icon flaticon-search-1"></span> Matching profil</li>
+                                <li><span class="icon flaticon-map-locator"></span> Allemagne</li>
+                                <li><span class="icon flaticon-clock-3"></span> Process</li>
+                                <li><span class="icon flaticon-briefcase"></span> Orientation</li>
                             </ul>
                             <ul class="job-other-info">
-                                <li class="time">Full Time</li>
-                                <li class="privacy">Private</li>
-                                <li class="required">Urgent</li>
+                                <li class="time">Ciblé</li>
+                                <li class="privacy">Encadré</li>
+                                <li class="required">Sérieux</li>
                             </ul>
-                            <button class="bookmark-btn"><span class="flaticon-bookmark"></span></button>
+                            <button class="bookmark-btn" type="button"><span class="flaticon-bookmark"></span></button>
                         </div>
                     </div>
                 </div>
 
-                <!-- Job Block -->
                 <div class="job-block col-lg-6 col-md-12 col-sm-12">
                     <div class="inner-box">
                         <div class="content">
-                            <span class="company-logo"><img src="images/resource/company-logo/1-4.png"
-                                    alt=""></span>
-                            <h4><a href="#">Senior Product Designer</a></h4>
+                            <span class="company-logo">
+                                <img src="{{ asset('assets/frontoffice/images/resource/company-logo/1-4.png') }}" alt="">
+                            </span>
+                            <h4><a href="#">4) Démarches & départ</a></h4>
                             <ul class="job-info">
-                                <li><span class="icon flaticon-briefcase"></span> Segment</li>
-                                <li><span class="icon flaticon-map-locator"></span> London, UK</li>
-                                <li><span class="icon flaticon-clock-3"></span> 11 hours ago</li>
-                                <li><span class="icon flaticon-money"></span> $35k - $45k</li>
+                                <li><span class="icon flaticon-file"></span> Dossier final</li>
+                                <li><span class="icon flaticon-email-3"></span> Conseils & suivi</li>
+                                <li><span class="icon flaticon-clock-3"></span> Planning</li>
+                                <li><span class="icon flaticon-map-locator"></span> Installation</li>
                             </ul>
                             <ul class="job-other-info">
-                                <li class="time">Full Time</li>
-                                <li class="privacy">Private</li>
-                                <li class="required">Urgent</li>
+                                <li class="time">Accompagné</li>
+                                <li class="privacy">Structuré</li>
+                                <li class="required">Checklist</li>
                             </ul>
-                            <button class="bookmark-btn"><span class="flaticon-bookmark"></span></button>
+                            <button class="bookmark-btn" type="button"><span class="flaticon-bookmark"></span></button>
                         </div>
                     </div>
                 </div>
 
-                <!-- Job Block -->
-                <div class="job-block col-lg-6 col-md-12 col-sm-12">
-                    <div class="inner-box">
-                        <div class="content">
-                            <span class="company-logo"><img src="images/resource/company-logo/1-5.png"
-                                    alt=""></span>
-                            <h4><a href="#">Senior Full Stack Engineer, Creator Success</a></h4>
-                            <ul class="job-info">
-                                <li><span class="icon flaticon-briefcase"></span> Segment</li>
-                                <li><span class="icon flaticon-map-locator"></span> London, UK</li>
-                                <li><span class="icon flaticon-clock-3"></span> 11 hours ago</li>
-                                <li><span class="icon flaticon-money"></span> $35k - $45k</li>
-                            </ul>
-                            <ul class="job-other-info">
-                                <li class="time">Full Time</li>
-                                <li class="privacy">Private</li>
-                                <li class="required">Urgent</li>
-                            </ul>
-                            <button class="bookmark-btn"><span class="flaticon-bookmark"></span></button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Job Block -->
-                <div class="job-block col-lg-6 col-md-12 col-sm-12">
-                    <div class="inner-box">
-                        <div class="content">
-                            <span class="company-logo"><img src="images/resource/company-logo/1-6.png"
-                                    alt=""></span>
-                            <h4><a href="#">Software Engineer (Android), Libraries</a></h4>
-                            <ul class="job-info">
-                                <li><span class="icon flaticon-briefcase"></span> Segment</li>
-                                <li><span class="icon flaticon-map-locator"></span> London, UK</li>
-                                <li><span class="icon flaticon-clock-3"></span> 11 hours ago</li>
-                                <li><span class="icon flaticon-money"></span> $35k - $45k</li>
-                            </ul>
-                            <ul class="job-other-info">
-                                <li class="time">Full Time</li>
-                                <li class="privacy">Private</li>
-                                <li class="required">Urgent</li>
-                            </ul>
-                            <button class="bookmark-btn"><span class="flaticon-bookmark"></span></button>
-                        </div>
-                    </div>
-                </div>
             </div>
 
             <div class="btn-box">
-                <a href="#" class="theme-btn btn-style-one bg-blue"><span class="btn-title">Load More
-                        Listing</span></a>
+                <a href="#contact" class="theme-btn btn-style-one bg-blue">
+                    <span class="btn-title">Commencer maintenant</span>
+                </a>
             </div>
         </div>
     </section>
-    <!-- End Job Section -->
+    <!-- End Process -->
 
-    <!-- Testimonial Section -->
+    <!-- Testimonials -->
     <section class="testimonial-section">
         <div class="container-fluid">
-            <!-- Sec Title -->
             <div class="sec-title text-center">
-                <h2>Testimonials From Our Customers</h2>
-                <div class="text">Lorem ipsum dolor sit amet elit, sed do eiusmod tempor</div>
+                <h2>Témoignages</h2>
+                <div class="text">Des étudiants accompagnés par Atsoubi.</div>
             </div>
 
             <div class="carousel-outer wow fadeInUp">
-
-                <!-- Testimonial Carousel -->
                 <div class="testimonial-carousel owl-carousel owl-theme">
 
-                    <!--Testimonial Block -->
                     <div class="testimonial-block">
                         <div class="inner-box">
-                            <h4 class="title">Good theme</h4>
-                            <div class="text">Without JobHunt i’d be homeless, they found me a job and got me sorted out
-                                quickly with everything! Can’t quite… The Mitech team works really hard to ensure high level
-                                of quality</div>
+                            <h4 class="title">Accompagnement clair</h4>
+                            <div class="text">
+                                J’ai compris les étapes, j’ai préparé mon dossier correctement et j’ai été guidé à chaque moment.
+                            </div>
                             <div class="info-box">
-                                <div class="thumb"><img src="images/resource/testi-thumb-1.png" alt=""></div>
-                                <h4 class="name">Nicole Wells</h4>
-                                <span class="designation">Web Developer</span>
+                                <div class="thumb">
+                                    <img src="{{ asset('assets/frontoffice/images/resource/testi-thumb-1.png') }}" alt="">
+                                </div>
+                                <h4 class="name">Étudiant</h4>
+                                <span class="designation">Maroc</span>
                             </div>
                         </div>
                     </div>
 
-                    <!--Testimonial Block -->
                     <div class="testimonial-block">
                         <div class="inner-box">
-                            <h4 class="title">Great quality!</h4>
-                            <div class="text">Without JobHunt i’d be homeless, they found me a job and got me sorted out
-                                quickly with everything! Can’t quite… The Mitech team works really hard to ensure high level
-                                of quality</div>
+                            <h4 class="title">Très pro</h4>
+                            <div class="text">
+                                Le suivi était rapide, et on sent que l’équipe maîtrise le processus.
+                            </div>
                             <div class="info-box">
-                                <div class="thumb"><img src="images/resource/testi-thumb-2.png" alt=""></div>
-                                <h4 class="name">Gabriel Nolan</h4>
-                                <span class="designation">Consultant</span>
+                                <div class="thumb">
+                                    <img src="{{ asset('assets/frontoffice/images/resource/testi-thumb-2.png') }}" alt="">
+                                </div>
+                                <h4 class="name">Candidate</h4>
+                                <span class="designation">Casablanca</span>
                             </div>
                         </div>
                     </div>
 
-                    <!--Testimonial Block -->
                     <div class="testimonial-block">
                         <div class="inner-box">
-                            <h4 class="title">Awesome Design </h4>
-                            <div class="text">Without JobHunt i’d be homeless, they found me a job and got me sorted out
-                                quickly with everything! Can’t quite… The Mitech team works really hard to ensure high level
-                                of quality</div>
+                            <h4 class="title">Étapes simplifiées</h4>
+                            <div class="text">
+                                Avant, j’étais perdu. Avec Atsoubi, j’ai eu une checklist et un plan clair.
+                            </div>
                             <div class="info-box">
-                                <div class="thumb"><img src="images/resource/testi-thumb-3.png" alt=""></div>
-                                <h4 class="name">Ashley Jenkins</h4>
-                                <span class="designation">Designer</span>
+                                <div class="thumb">
+                                    <img src="{{ asset('assets/frontoffice/images/resource/testi-thumb-3.png') }}" alt="">
+                                </div>
+                                <h4 class="name">Étudiant</h4>
+                                <span class="designation">Rabat</span>
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>
     </section>
-    <!-- End Testimonial Section -->
+    <!-- End Testimonials -->
 
-    <!--Clients Section-->
+    <!-- Clients Section (optional logos) -->
     <section class="clients-section">
         <div class="sponsors-outer wow fadeInUp">
-            <!--Sponsors Carousel-->
             <ul class="sponsors-carousel owl-carousel owl-theme">
-                <li class="slide-item">
-                    <figure class="image-box"><a href="#"><img src="images/clients/1-1.png" alt=""></a>
-                    </figure>
-                </li>
-                <li class="slide-item">
-                    <figure class="image-box"><a href="#"><img src="images/clients/1-2.png" alt=""></a>
-                    </figure>
-                </li>
-                <li class="slide-item">
-                    <figure class="image-box"><a href="#"><img src="images/clients/1-3.png" alt=""></a>
-                    </figure>
-                </li>
-                <li class="slide-item">
-                    <figure class="image-box"><a href="#"><img src="images/clients/1-4.png" alt=""></a>
-                    </figure>
-                </li>
-                <li class="slide-item">
-                    <figure class="image-box"><a href="#"><img src="images/clients/1-5.png" alt=""></a>
-                    </figure>
-                </li>
-                <li class="slide-item">
-                    <figure class="image-box"><a href="#"><img src="images/clients/1-6.png" alt=""></a>
-                    </figure>
-                </li>
-                <li class="slide-item">
-                    <figure class="image-box"><a href="#"><img src="images/clients/1-7.png" alt=""></a>
-                    </figure>
-                </li>
+                <li class="slide-item"><figure class="image-box"><a href="#"><img src="{{ asset('assets/frontoffice/images/clients/1-1.png') }}" alt=""></a></figure></li>
+                <li class="slide-item"><figure class="image-box"><a href="#"><img src="{{ asset('assets/frontoffice/images/clients/1-2.png') }}" alt=""></a></figure></li>
+                <li class="slide-item"><figure class="image-box"><a href="#"><img src="{{ asset('assets/frontoffice/images/clients/1-3.png') }}" alt=""></a></figure></li>
+                <li class="slide-item"><figure class="image-box"><a href="#"><img src="{{ asset('assets/frontoffice/images/clients/1-4.png') }}" alt=""></a></figure></li>
+                <li class="slide-item"><figure class="image-box"><a href="#"><img src="{{ asset('assets/frontoffice/images/clients/1-5.png') }}" alt=""></a></figure></li>
+                <li class="slide-item"><figure class="image-box"><a href="#"><img src="{{ asset('assets/frontoffice/images/clients/1-6.png') }}" alt=""></a></figure></li>
+                <li class="slide-item"><figure class="image-box"><a href="#"><img src="{{ asset('assets/frontoffice/images/clients/1-7.png') }}" alt=""></a></figure></li>
             </ul>
         </div>
     </section>
-    <!-- End Clients Section-->
 
     <!-- About Section -->
     <section class="about-section">
         <div class="auto-container">
             <div class="row">
-                <!-- Content Column -->
                 <div class="content-column col-lg-6 col-md-12 col-sm-12 order-2">
                     <div class="inner-column wow fadeInUp">
                         <div class="sec-title">
-                            <h2>Millions of Jobs. Find the one that suits you.</h2>
-                            <div class="text">Search all the open positions on the web. Get your own personalized salary
-                                estimate. Read reviews on over 600,000 companies worldwide.</div>
+                            <h2>Atsoubi, votre partenaire pour l’Allemagne</h2>
+                            <div class="text">
+                                Notre objectif : vous guider clairement, éviter les erreurs, et maximiser vos chances
+                                grâce à un accompagnement structuré (profil, dossier, opportunité, démarches).
+                            </div>
                         </div>
                         <ul class="list-style-one">
-                            <li>Bring to the table win-win survival</li>
-                            <li>Capitalize on low hanging fruit to identify</li>
-                            <li>But I must explain to you how all this</li>
+                            <li>Suivi personnalisé</li>
+                            <li>Checklist & plan d’action</li>
+                            <li>Conseils pratiques et organisation</li>
                         </ul>
-                        <a href="#" class="theme-btn btn-style-one bg-blue"><span class="btn-title">Get
-                                Started</span></a>
+                        <a href="#contact" class="theme-btn btn-style-one bg-blue"><span class="btn-title">Demander une pré-évaluation</span></a>
                     </div>
                 </div>
 
-                <!-- Image Column -->
                 <div class="image-column col-lg-6 col-md-12 col-sm-12">
-                    <figure class="image wow fadeInLeft"><img src="images/resource/image-2.jpg" alt=""></figure>
+                    <figure class="image wow fadeInLeft">
+                        <img src="{{ asset('assets/frontoffice/images/resource/image-2.jpg') }}" alt="">
+                    </figure>
 
-                    <!-- Count Employers -->
                     <div class="count-employers wow fadeInUp">
                         <div class="check-box"><span class="flaticon-tick"></span></div>
-                        <span class="title">300k+ Employers</span>
-                        <figure class="image"><img src="images/resource/multi-logo.png" alt=""></figure>
+                        <span class="title">Process clair & structuré</span>
+                        <figure class="image">
+                            <img src="{{ asset('assets/frontoffice/images/resource/multi-logo.png') }}" alt="">
+                        </figure>
                     </div>
                 </div>
             </div>
 
-
-            <!-- Fun Fact Section -->
             <div class="fun-fact-section">
                 <div class="row">
-                    <!--Column-->
                     <div class="counter-column col-lg-4 col-md-4 col-sm-12 wow fadeInUp">
-                        <div class="count-box"><span class="count-text" data-speed="3000" data-stop="4">0</span>M</div>
-                        <h4 class="counter-title">4 million daily active users</h4>
+                        <div class="count-box"><span class="count-text" data-speed="3000" data-stop="24">0</span>h</div>
+                        <h4 class="counter-title">Réponse rapide</h4>
                     </div>
 
-                    <!--Column-->
                     <div class="counter-column col-lg-4 col-md-4 col-sm-12 wow fadeInUp" data-wow-delay="400ms">
-                        <div class="count-box"><span class="count-text" data-speed="3000" data-stop="12">0</span>k</div>
-                        <h4 class="counter-title">Over 12k open job positions</h4>
+                        <div class="count-box"><span class="count-text" data-speed="3000" data-stop="4">0</span> étapes</div>
+                        <h4 class="counter-title">Parcours simple</h4>
                     </div>
 
-                    <!--Column-->
                     <div class="counter-column col-lg-4 col-md-4 col-sm-12 wow fadeInUp" data-wow-delay="800ms">
-                        <div class="count-box"><span class="count-text" data-speed="3000" data-stop="20">0</span>M</div>
-                        <h4 class="counter-title">Over 20 million stories shared</h4>
-                    </div>
-                </div>
-            </div>
-            <!-- Fun Fact Section -->
-        </div>
-    </section>
-    <!-- End About Section -->
-
-    <!-- News Section -->
-    <section class="news-section">
-        <div class="auto-container">
-            <div class="sec-title text-center">
-                <h2>Recent News Articles</h2>
-                <div class="text">Fresh job related news content posted each day.</div>
-            </div>
-
-            <div class="row wow fadeInUp">
-                <!-- News Block -->
-                <div class="news-block col-lg-4 col-md-6 col-sm-12">
-                    <div class="inner-box">
-                        <div class="image-box">
-                            <figure class="image"><img src="images/resource/news-1.jpg" alt="" /></figure>
-                        </div>
-                        <div class="lower-content">
-                            <ul class="post-meta">
-                                <li><a href="#">August 31, 2021</a></li>
-                                <li><a href="#">12 Comment</a></li>
-                            </ul>
-                            <h3><a href="blog-single.html">Attract Sales And Profits</a></h3>
-                            <p class="text">A job ravenously while Far much that one rank beheld after outside....</p>
-                            <a href="#" class="read-more">Read More <i class="fa fa-angle-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- News Block -->
-                <div class="news-block col-lg-4 col-md-6 col-sm-12">
-                    <div class="inner-box">
-                        <div class="image-box">
-                            <figure class="image"><img src="images/resource/news-2.jpg" alt="" /></figure>
-                        </div>
-                        <div class="lower-content">
-                            <ul class="post-meta">
-                                <li><a href="#">August 31, 2021</a></li>
-                                <li><a href="#">12 Comment</a></li>
-                            </ul>
-                            <h3><a href="blog-single.html">5 Tips For Your Job Interviews</a></h3>
-                            <p class="text">A job ravenously while Far much that one rank beheld after outside....</p>
-                            <a href="#" class="read-more">Read More <i class="fa fa-angle-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- News Block -->
-                <div class="news-block col-lg-4 col-md-6 col-sm-12">
-                    <div class="inner-box">
-                        <div class="image-box">
-                            <figure class="image"><img src="images/resource/news-3.jpg" alt="" /></figure>
-                        </div>
-                        <div class="lower-content">
-                            <ul class="post-meta">
-                                <li><a href="#">August 31, 2021</a></li>
-                                <li><a href="#">12 Comment</a></li>
-                            </ul>
-                            <h3><a href="blog-single.html">An Overworked Newspaper Editor</a></h3>
-                            <p class="text">A job ravenously while Far much that one rank beheld after outside....</p>
-                            <a href="#" class="read-more">Read More <i class="fa fa-angle-right"></i></a>
-                        </div>
+                        <div class="count-box"><span class="count-text" data-speed="3000" data-stop="100">0</span>%</div>
+                        <h4 class="counter-title">Accompagnement humain</h4>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- End News Section -->
+    <!-- End About -->
 
-    <!-- App Section -->
-    <section class="app-section">
-        <div class="auto-container">
-            <div class="row">
-                <!-- Image Column -->
-                <div class="image-column col-lg-6 col-md-12 col-sm-12">
-                    <div class="bg-shape"></div>
-                    <figure class="image wow fadeInLeft"><img src="images/resource/mobile-app.png" alt="">
-                    </figure>
-                </div>
-
-                <div class="content-column col-lg-6 col-md-12 col-sm-12">
-                    <div class="inner-column wow fadeInRight">
-                        <div class="sec-title">
-                            <span class="sub-title">DOWNLOAD & ENJOY</span>
-                            <h2>Get the Superio Job<br> Search App</h2>
-                            <div class="text">Search through millions of jobs and find the right fit. Simply<br> swipe
-                                right to apply.</div>
-                        </div>
-                        <div class="download-btn">
-                            <a href="#"><img src="images/icons/apple.png" alt=""></a>
-                            <a href="#"><img src="images/icons/google.png" alt=""></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End App Section -->
-
-    <!-- Call To Action -->
-    <section class="call-to-action">
+    <!-- Call To Action / Contact -->
+    <section class="call-to-action" id="contact">
         <div class="auto-container">
             <div class="outer-box wow fadeInUp">
                 <div class="content-column">
                     <div class="sec-title">
-                        <h2>Recruiting?</h2>
-                        <div class="text">Advertise your jobs to millions of monthly users and search 15.8 million<br>
-                            CVs in our database.</div>
-                        <a href="#" class="theme-btn btn-style-one bg-blue"><span class="btn-title">Start
-                                Recruiting Now</span></a>
+                        <h2>Prêt à commencer ?</h2>
+                        <div class="text">
+                            Déposez vos informations pour une pré-évaluation gratuite. <br>
+                            Nous vous répondons rapidement avec les prochaines étapes.
+                        </div>
+
+                        <div class="job-search-form" style="margin-top:20px;">
+                            <form method="post" action="#">
+                                @csrf
+                                <div class="row">
+                                    <div class="form-group col-lg-4 col-md-12 col-sm-12">
+                                        <span class="icon flaticon-user"></span>
+                                        <input type="text" name="name" placeholder="Nom complet" required>
+                                    </div>
+
+                                    <div class="form-group col-lg-4 col-md-12 col-sm-12 location">
+                                        <span class="icon flaticon-email-3"></span>
+                                        <input type="email" name="email" placeholder="Email" required>
+                                    </div>
+
+                                    <div class="form-group col-lg-4 col-md-12 col-sm-12">
+                                        <span class="icon flaticon-briefcase"></span>
+                                        <input type="text" name="level" placeholder="Niveau (Bac, Bac+2...)" required>
+                                    </div>
+
+                                    <div class="form-group col-12" style="margin-top:10px;">
+                                        <textarea name="message" placeholder="Votre objectif (contrat/études), ville, niveau d’allemand..." style="height:120px;"></textarea>
+                                    </div>
+
+                                    <div class="form-group col-12 btn-box" style="margin-top:10px;">
+                                        <button type="submit" class="theme-btn btn-style-one bg-blue">
+                                            <span class="btn-title">Envoyer</span>
+                                        </button>
+
+                                        <a href="https://wa.me/212600000000" target="_blank" class="theme-btn btn-style-three" style="margin-left:10px;">
+                                            WhatsApp
+                                        </a>
+                                    </div>
+
+                                    <div class="form-group col-12 mt-2">
+                                        <small style="opacity:.85;display:block;">
+                                            Remplace le numéro WhatsApp par le tien : 2126XXXXXXXX.
+                                        </small>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
                     </div>
                 </div>
 
-                <div class="image-column" style="background-image: url(images/resource/image-1.png);">
-                    <figure class="image"><img src="images/resource/image-1.png" alt=""></figure>
+                <div class="image-column"
+                     style="background-image: url('{{ asset('assets/frontoffice/images/resource/image-1.png') }}');">
+                    <figure class="image">
+                        <img src="{{ asset('assets/frontoffice/images/resource/image-1.png') }}" alt="">
+                    </figure>
                 </div>
             </div>
         </div>
     </section>
-    <!-- End Call To Action -->
+    <!-- End CTA -->
 
 @endsection
